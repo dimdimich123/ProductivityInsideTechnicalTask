@@ -17,7 +17,7 @@ namespace GameCore.Buildings.Upgradable
 
         public void Upgrade()
         {
-            if (IUpgradable.GetResources(_levelsConfig.Levels[_currentLevel].PriceInResources))
+            if (IUpgradable.TryUpgrade(_levelsConfig.Levels[_currentLevel].PriceInResources))
             {
                 OnDestroy();
                 _currentLevel++;

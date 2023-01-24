@@ -6,10 +6,10 @@ namespace GameCore.Buildings.Upgradable
 {
     public interface IUpgradable
     {
-        public static event Func<List<BuildingResource>, bool> TryGetResources;
-        public static bool GetResources(List<BuildingResource> priceInResources)
+        public static event Func<List<BuildingResource>, bool> TryUgradeBuilding;
+        public static bool TryUpgrade(List<BuildingResource> priceInResources)
         {
-            if(TryGetResources?.Invoke(priceInResources) == true)
+            if(TryUgradeBuilding?.Invoke(priceInResources) == true)
             {
                 return true;
             }
