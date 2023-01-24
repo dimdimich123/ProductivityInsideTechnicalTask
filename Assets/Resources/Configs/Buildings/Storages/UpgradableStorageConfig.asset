@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88093f108f40fa40b539d8521891289, type: 3}
+  m_Name: UpgradableStorageConfig
+  m_EditorClassIdentifier: 
+  _buildingType: 11
+  _levels:
+  - ResourceCapacity:
+    - Resource: 0
+      Value: 80
+    - Resource: 1
+      Value: 80
+    - Resource: 2
+      Value: 80
+    - Resource: 3
+      Value: 80
+    - Resource: 4
+      Value: 80
+    - Resource: 5
+      Value: 80
+    PriceInResources:
+    - Resource: 0
+      Value: 40
+    - Resource: 1
+      Value: 25
+    - Resource: 4
+      Value: 20
+  - ResourceCapacity:
+    - Resource: 0
+      Value: 160
+    - Resource: 1
+      Value: 160
+    - Resource: 2
+      Value: 160
+    - Resource: 3
+      Value: 160
+    - Resource: 4
+      Value: 160
+    - Resource: 5
+      Value: 160
+    PriceInResources:
+    - Resource: 0
+      Value: 60
+    - Resource: 1
+      Value: 45
+    - Resource: 4
+      Value: 35
+  - ResourceCapacity:
+    - Resource: 0
+      Value: 240
+    - Resource: 1
+      Value: 240
+    - Resource: 2
+      Value: 240
+    - Resource: 3
+      Value: 240
+    - Resource: 4
+      Value: 240
+    - Resource: 5
+      Value: 240
+    PriceInResources:
+    - Resource: 0
+      Value: 80
+    - Resource: 1
+      Value: 65
+    - Resource: 4
+      Value: 55
