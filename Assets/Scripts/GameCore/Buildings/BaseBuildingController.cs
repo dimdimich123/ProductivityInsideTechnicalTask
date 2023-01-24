@@ -27,10 +27,7 @@ namespace GameCore.Buildings
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if(_building.IsBuilt)
-            {
-                _buildingUI.Open();
-            }
+            _buildingUI.Open();
         }
     }
 }
