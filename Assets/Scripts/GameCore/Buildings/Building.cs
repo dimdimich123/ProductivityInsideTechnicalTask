@@ -15,15 +15,15 @@ namespace GameCore.Buildings {
         public Vector2Int Size => _size;
 
         protected Transform _transform;
+        private Collider _modelCollider;
 
         private float _buildDuration;
         private float _destroyDuration = 1.5f;
 
-        public bool IsBuilt { get; protected set; }
-
         private void Awake()
         {
             _transform = GetComponent<Transform>();
+            _modelCollider = GetComponentInChildren<Collider>();
         }
 
         public void Init(float buildDuration)
@@ -39,14 +39,6 @@ namespace GameCore.Buildings {
                 .AppendInterval(0.25f)
                 .SetLoops(-1)
                 .SetLink(gameObject);
-
-            //Observable.Timer(TimeSpan.FromSeconds(_buildDuration))
-            //.Subscribe(_ =>
-            //    {
-            //        buildAnimation.Kill();
-            //        EndBuild();
-            //    })
-            //.AddTo(this);
 
             StartCoroutine(BuildTimer(buildAnimation));
         }
@@ -66,7 +58,7 @@ namespace GameCore.Buildings {
 
         public virtual void EndBuild() 
         {
-            IsBuilt = true;
+            _modelCollider.enabled = true;
         }
 
         public virtual void Breake()
