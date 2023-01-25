@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: _buildingUI
       value: 
       objectReference: {fileID: 210789595036711199}
+    - target: {fileID: -4790923579768648404, guid: ec3d566d43ba66340939868b7c9630b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3950594088737619235, guid: ec3d566d43ba66340939868b7c9630b0, type: 3}
       propertyPath: _miningUI
       value: 

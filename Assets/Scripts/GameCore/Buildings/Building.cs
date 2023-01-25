@@ -4,9 +4,10 @@ using UniRx;
 using System;
 using System.Collections;
 using GameCore.CommonLogic;
+using Infrastructure.CommonLogic;
 
 namespace GameCore.Buildings {
-    public class Building : MonoBehaviour
+    public class Building : MonoBehaviour, IBuilding
     {
         [SerializeField] private BuildingType _buildingType;
         [SerializeField] private Vector2Int _size;
@@ -77,6 +78,11 @@ namespace GameCore.Buildings {
                     Destroy(gameObject);
                 })
             .AddTo(this);
+        }
+
+        public virtual Building AcceptVisitor(IVisitor visitor)
+        {
+            return visitor.Visit(this);
         }
     }
 }

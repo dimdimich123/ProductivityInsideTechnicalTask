@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: AcceleratingFactoryConfig
   m_EditorClassIdentifier: 
   _buildingType: 10
+  _buildDurationInSeconds: 10
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
+  _buildingType: 10
   _increaseSpeedInPercentage: 0.1

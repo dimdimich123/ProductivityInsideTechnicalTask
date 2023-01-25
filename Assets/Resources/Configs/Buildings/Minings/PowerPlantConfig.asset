@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: PowerPlantConfig
   m_EditorClassIdentifier: 
   _buildingType: 5
+  _buildDurationInSeconds: 5
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
+  _buildingType: 5
   _config:
     MiningResources:
     - Resource: 2

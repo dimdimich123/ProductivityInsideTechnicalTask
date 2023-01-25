@@ -5,6 +5,7 @@ namespace UI.HUD {
     public sealed class HUDPresenter : MonoBehaviour
     {
         [SerializeField] private Transform _cameraTransform;
+        [SerializeField] private Shop.ShopView _shopView;
 
         private HUDView _view;
         private HUDModel _model;
@@ -17,8 +18,14 @@ namespace UI.HUD {
 
         private void OnEnable()
         {
+            _view.OnOpenShop += OpenShop;
             _view.OnMoveCameraX += SetCameraPoitionX;
             _view.OnMoveCameraZ += SetCameraPoitionZ;
+        }
+
+        private void OpenShop()
+        {
+            _shopView.Open();
         }
 
         private void SetCameraPoitionX(float value)
@@ -33,6 +40,7 @@ namespace UI.HUD {
 
         private void OnDisable()
         {
+            _view.OnOpenShop -= OpenShop;
             _view.OnMoveCameraX -= SetCameraPoitionX;
             _view.OnMoveCameraZ -= SetCameraPoitionZ;
         }

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: StorageConfig
   m_EditorClassIdentifier: 
   _buildingType: 9
+  _buildDurationInSeconds: 8
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
   _config:
     ResourceCapacity:
     - Resource: 0

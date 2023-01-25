@@ -1,5 +1,6 @@
 using Configs.Buildings.Acceleratings;
 using GameCore.CommonLogic;
+using Infrastructure.CommonLogic;
 
 namespace GameCore.Buildings.Acceleratings
 {
@@ -27,6 +28,11 @@ namespace GameCore.Buildings.Acceleratings
         private void OnDestroy()
         {
             BuildingTimer.TimeScale -= _currentConfig.IncreaseSpeedInPercentage;
+        }
+
+        public override Building AcceptVisitor(IVisitor visitor)
+        {
+            return visitor.Visit(this);
         }
     }
 }

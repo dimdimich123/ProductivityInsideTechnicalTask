@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: SawmillConfig
   m_EditorClassIdentifier: 
   _buildingType: 3
+  _buildDurationInSeconds: 6
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
+  _buildingType: 3
   _config:
     MiningResources:
     - Resource: 0
