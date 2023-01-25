@@ -12,8 +12,6 @@ namespace GameCore.Grid
         private Building[,] _grid;
         private Building _flyingBuilding;
         private Transform _flyingBuildingTransform;
-        private Renderer _buildingRenderer;
-        private Color _defaultBuildingColor;
 
         private bool _available = false;
         private int _x;
@@ -33,8 +31,6 @@ namespace GameCore.Grid
 
             _flyingBuilding = buildingPrefab;
             _flyingBuildingTransform = _flyingBuilding.transform;
-            _buildingRenderer = _flyingBuilding.GetComponentInChildren<Renderer>();
-            _defaultBuildingColor = _buildingRenderer.material.color;
         }
 
         public void OnPointerMove(PointerEventData eventData)
@@ -54,7 +50,6 @@ namespace GameCore.Grid
                     _available = false;
                 }
 
-                PaintBuilding();
                 _flyingBuildingTransform.position = new Vector3(_x, 0, _y);
             }
         }
@@ -65,16 +60,6 @@ namespace GameCore.Grid
             {
                 PlaceFlyingBuilding(_x, _y);
             }
-        }
-
-        private void PaintBuilding()
-        {
-            _buildingRenderer.material.color = _available ? Color.green : Color.red;
-        }
-
-        private void SetDefaultBuildingColor()
-        {
-            _buildingRenderer.material.color = _defaultBuildingColor;
         }
 
         private bool IsPlaceTaken(int placeX, int placeY)
@@ -100,7 +85,6 @@ namespace GameCore.Grid
                 }
             }
 
-            SetDefaultBuildingColor();
             _flyingBuilding.StartBuild();
             _flyingBuilding = null;
         }
