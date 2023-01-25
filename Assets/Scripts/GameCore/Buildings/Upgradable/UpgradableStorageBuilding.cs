@@ -1,5 +1,6 @@
 using GameCore.Buildings.Storages;
 using Configs.Buildings.Storages;
+using Infrastructure.CommonLogic;
 
 namespace GameCore.Buildings.Upgradable
 {
@@ -17,14 +18,21 @@ namespace GameCore.Buildings.Upgradable
 
         public void Upgrade()
         {
-            if (IUpgradable.TryUpgrade(_levelsConfig.Levels[_currentLevel].PriceInResources))
+            if (_currentLevel < _levelsConfig.Levels.Count)
             {
-                OnDestroy();
-                _currentLevel++;
-                _currentLevelConfig = _levelsConfig.Levels[_currentLevel];
-                Store();
+                if (IUpgradable.TryUpgrade(_levelsConfig.Levels[_currentLevel].PriceInResources))
+                {
+                    OnDestroy();
+                    _currentLevelConfig = _levelsConfig.Levels[_currentLevel];
+                    _currentLevel++;
+                    Store();
+                }
             }
         }
 
+        public override Building AcceptVisitor(IVisitor visitor)
+        {
+            return visitor.Visit(this);
+        }
     }
 }

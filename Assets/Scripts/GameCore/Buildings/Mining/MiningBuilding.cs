@@ -1,4 +1,5 @@
 using Configs.Buildings.Minings;
+using Infrastructure.CommonLogic;
 using System;
 using UniRx;
 
@@ -56,6 +57,11 @@ namespace GameCore.Buildings.Minings
         {
             IMining.OnGetResourcesInvoke(_currentLevelConfig.MiningResources);
             StartMining();
+        }
+
+        public override Building AcceptVisitor(IVisitor visitor)
+        {
+            return visitor.Visit(this);
         }
     }
 }
