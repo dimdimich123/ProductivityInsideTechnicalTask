@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88093f108f40fa40b539d8521891289, type: 3}
   m_Name: UpgradableStorageConfig
   m_EditorClassIdentifier: 
-  _buildingType: 11
+  _buildingType: 12
+  _buildDurationInSeconds: 9
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
   _levels:
   - ResourceCapacity:
     - Resource: 0

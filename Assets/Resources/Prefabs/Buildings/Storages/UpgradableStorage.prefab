@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95385cceaf93c994fb6d0ff9a2040ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buildingType: 11
+  _buildingType: 12
   _size: {x: 1, y: 1}
 --- !u!1001 &198472515829656068
 PrefabInstance:
@@ -55,6 +55,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 458246612515338840}
     m_Modifications:
+    - target: {fileID: -6557647117237008111, guid: 2c246b290817b4046a1238cc110fe9c0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 926087017772481867, guid: 2c246b290817b4046a1238cc110fe9c0, type: 3}
       propertyPath: _building
       value: 

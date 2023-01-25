@@ -12,16 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0319ce3ffb2737c4da62910bbbdb1782, type: 3}
   m_Name: MiningBuildingConfig
   m_EditorClassIdentifier: 
-  _buildingType: 6
+  _buildingType: 7
+  _buildDurationInSeconds: 5
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
   _config:
     MiningResources:
-    - Resource: 3
-      Value: 25
-    MiningDuration: 10
-    PriceInResources:
-    - Resource: 1
-      Value: 40
     - Resource: 4
-      Value: 20
-    - Resource: 0
       Value: 10
+    MiningDuration: 7
+    PriceInResources:
+    - Resource: 0
+      Value: 5

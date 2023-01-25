@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: UniversalUpgradableFactoryConfig
   m_EditorClassIdentifier: 
   _buildingType: 11
+  _buildDurationInSeconds: 7
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
+  _buildingType: 11
   _levels:
   - MiningResources:
     - Resource: 0

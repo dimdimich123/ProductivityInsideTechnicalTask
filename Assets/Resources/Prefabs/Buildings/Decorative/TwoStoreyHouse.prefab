@@ -55,6 +55,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675098966999959939}
     m_Modifications:
+    - target: {fileID: -7835534799151112500, guid: 08035246daa5cbe4ca4c18b48f2ae7ed, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5474762732283815402, guid: 08035246daa5cbe4ca4c18b48f2ae7ed, type: 3}
       propertyPath: m_Name
       value: TwoStoreyHouse

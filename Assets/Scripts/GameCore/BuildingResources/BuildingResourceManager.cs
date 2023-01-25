@@ -5,6 +5,7 @@ using GameCore.CommonLogic;
 using GameCore.Buildings.Minings;
 using GameCore.Buildings.Storages;
 using GameCore.Buildings.Upgradable;
+using UI.Shop;
 
 namespace GameCore.BuildingResources
 {
@@ -66,17 +67,17 @@ namespace GameCore.BuildingResources
             }
         }
 
-        private bool TryBuyBuilding(List<BuildingResource> resources)
+        private bool TryBuyBuilding(List<BuildingResource> priceInResources)
         {
-            foreach (BuildingResource resource in resources)
+            foreach (BuildingResource resource in priceInResources)
             {
-                if(resource.Value < _currentResources[resource.Resource].Current)
+                if(resource.Value > _currentResources[resource.Resource].Current)
                 {
                     return false;
                 }
             }
 
-            foreach (BuildingResource resource in resources)
+            foreach (BuildingResource resource in priceInResources)
             {
                 _currentResources[resource.Resource].Current -= resource.Value;
                 OnResourceChange?.Invoke(resource.Resource, _currentResources[resource.Resource].Current, _currentResources[resource.Resource].Max);
@@ -91,6 +92,7 @@ namespace GameCore.BuildingResources
             IStorage.OnStorageBuilt += IncreaseStorage;
             IStorage.OnStorageBreake += DecreaseStorage;
             IUpgradable.TryUgradeBuilding += TryBuyBuilding;
+            ShopPresenter.OnTryBuyBuilding += TryBuyBuilding;
         }
 
         private void OnDisable()
@@ -99,6 +101,7 @@ namespace GameCore.BuildingResources
             IStorage.OnStorageBuilt -= IncreaseStorage;
             IStorage.OnStorageBreake -= DecreaseStorage;
             IUpgradable.TryUgradeBuilding -= TryBuyBuilding;
+            ShopPresenter.OnTryBuyBuilding -= TryBuyBuilding;
         }
     }
 }

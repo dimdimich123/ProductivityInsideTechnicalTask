@@ -157,6 +157,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1762335481133671135}
     m_Modifications:
+    - target: {fileID: -4358234070232035126, guid: e0310cbc9af40e942bbfc31d9e869706, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3254855852797018084, guid: e0310cbc9af40e942bbfc31d9e869706, type: 3}
       propertyPath: m_Name
       value: TreePlantation

@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: BrickworksConfig
   m_EditorClassIdentifier: 
   _buildingType: 4
+  _buildDurationInSeconds: 5
+  _buildDurationInMinutes: 0
+  _buildDurationInHours: 0
+  _buildingType: 4
   _config:
     MiningResources:
     - Resource: 1

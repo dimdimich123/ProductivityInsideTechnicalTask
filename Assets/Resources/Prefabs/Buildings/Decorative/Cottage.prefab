@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 678287ff7fbef954bb6de8166b0d7723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buildingType: 0
+  _buildingType: 1
   _size: {x: 0, y: 0}
 --- !u!1001 &113803025769716639
 PrefabInstance:
@@ -350,7 +350,7 @@ MeshCollider:
   m_GameObject: {fileID: 7975952635654224041}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
