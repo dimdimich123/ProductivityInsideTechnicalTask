@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491fd9ca77a155e409fd2bdf6b5745db, type: 3}
+  m_Name: GlassFactoryShopConfig
+  m_EditorClassIdentifier: 
+  _building: 8
+  _buildingSprite: {fileID: 21300000, guid: 6b772bc9de4e50a4dbc70c38c936050b, type: 3}
+  _description: Produces glass, which is used in the construction of almost all buildings
+  _priceInResources:
+  - Resource: 1
+    Value: 10
+  - Resource: 2
+    Value: 10
+  - Resource: 5
+    Value: 5

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491fd9ca77a155e409fd2bdf6b5745db, type: 3}
+  m_Name: BrickworksShopConfig
+  m_EditorClassIdentifier: 
+  _building: 4
+  _buildingSprite: {fileID: 21300000, guid: 83431f89548d5c24890bb507771bf0f2, type: 3}
+  _description: Produces an amount of bricks
+  _priceInResources:
+  - Resource: 0
+    Value: 20
+  - Resource: 5
+    Value: 5
+  - Resource: 4
+    Value: 3
